@@ -4,36 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>One more world clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>World clock</title>
   </head>
   <body>
     <div class="container">
       <div>
-        <h1>One more world clock</h1>
+        <h1>One more world clock 🕑</h1>
         <select id="continent-select">
-          <option value="">Select a continent</option>
-          <option value="">Africa</option>
           <option value="">America</option>
+          <option value="">Africa</option>
           <option value="">Asia</option>
           <option value="">Europe</option>
           <option value="">Oceania</option>
         </select>
       </div>
 
-      <div class="city">
+      <div class="city" id="saopaulo">
         <div class="city-name-date">
           <h2>São Paulo</h2>
-          <div class="date">February 28th 2026</div>
+          <div class="date"></div>
         </div>
-        <div class="time">5:25 <small>PM</small></div>
+        <div class="time"></div>
       </div>
 
-      <div class="city">
+      <div class="city" id="lima">
         <div class="city-name-date">
-          <h2>São Paulo</h2>
-          <div class="date">February 28th 2026</div>
+          <h2>Lima</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">5:25 <small>PM</small></div>
+        <div class="time"></div>
+      </div>
+
+      <div class="city" id="newyork">
+        <div class="city-name-date">
+          <h2>New York</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
+      </div>
+
+      <div class="city" id="bogota">
+        <div class="city-name-date">
+          <h2>Bogotá</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
+      </div>
+
+      <div class="city" id="mexico">
+        <div class="city-name-date">
+          <h2>Mexico City</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
       </div>
     </div>
 

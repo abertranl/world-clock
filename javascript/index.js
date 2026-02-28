@@ -7,7 +7,7 @@ function updateTime() {
     let saopauloTime = moment().tz("America/Sao_Paulo");
     saopauloDateElement.innerHTML = saopauloTime.format("MMMM Do YYYY");
     saopauloTimeElement.innerHTML = saopauloTime.format(
-      "h:mm[<small>]A[</small>]",
+      "h:mm [<small>]A[</small>]",
     );
   }
 

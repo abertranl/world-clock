@@ -1,3 +1,18 @@
+// Update Your Timezone
+function updateYourTime() {
+  const yourDiv = document.getElementById("yourtime-cities");
+  if (yourDiv && yourDiv.style.display !== "none") {
+    const tz = moment.tz.guess(); // "Europe/Madrid"
+    const city = tz.split("/").pop().replace(/_/g, " "); // "Madrid"
+    const time = moment().tz(tz);
+
+    yourDiv.querySelector("h2").textContent = city;
+    yourDiv.querySelector(".date").textContent = time.format("MMMM Do YYYY");
+    yourDiv.querySelector(".time").innerHTML =
+      time.format("h:mm") + " <small>" + time.format("A") + "</small>";
+  }
+}
+
 // Update ALL cities across continents (expanded for Europe example)
 function updateTime() {
   // America cities
@@ -165,6 +180,8 @@ function updateTime() {
       "h:mm [<small>]A[</small>]",
     );
   }
+  // Your time
+  updateYourTime();
 }
 
 // NEW: Show/hide continents based on select
